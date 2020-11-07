@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_lines_on_missions",
+  "info": {
+    "name": "characterLinesOnMission"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "lines": {
+      "type": "richtext"
+    },
+    "mission": {
+      "model": "mission",
+      "via": "character_lines_on_missions"
+    },
+    "personagems": {
+      "collection": "personagem",
+      "via": "character_lines_on_mission"
+    }
+  }
+}

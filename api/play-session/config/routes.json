@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/play-sessions",
+      "handler": "play-session.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/play-sessions/count",
+      "handler": "play-session.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/play-sessions/:id",
+      "handler": "play-session.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/play-sessions",
+      "handler": "play-session.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/play-sessions/:id",
+      "handler": "play-session.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/play-sessions/:id",
+      "handler": "play-session.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

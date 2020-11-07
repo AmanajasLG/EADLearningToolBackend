@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "play_sessions",
+  "info": {
+    "name": "playSession",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "score": {
+      "type": "integer"
+    },
+    "sessionTime": {
+      "type": "float"
+    },
+    "finished": {
+      "type": "boolean",
+      "default": false
+    },
+    "win": {
+      "type": "boolean",
+      "default": false
+    },
+    "mission": {
+      "model": "mission",
+      "via": "play_sessions"
+    },
+    "game": {
+      "model": "game",
+      "via": "play_sessions"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "play_sessions"
+    }
+  }
+}

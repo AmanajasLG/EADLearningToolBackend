@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "name": "game",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "missions": {
+      "collection": "mission",
+      "via": "game"
+    },
+    "play_sessions": {
+      "via": "game",
+      "collection": "play-session"
+    }
+  }
+}

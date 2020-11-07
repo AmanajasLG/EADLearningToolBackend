@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "missions",
+  "info": {
+    "name": "mission",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "personagems": {
+      "collection": "personagem",
+      "via": "missions",
+      "dominant": true
+    },
+    "locations": {
+      "via": "missions",
+      "collection": "location",
+      "dominant": true
+    },
+    "game": {
+      "via": "missions",
+      "model": "game"
+    },
+    "character_lines_on_missions": {
+      "via": "mission",
+      "collection": "character-lines-on-mission"
+    },
+    "play_sessions": {
+      "via": "mission",
+      "collection": "play-session"
+    }
+  }
+}

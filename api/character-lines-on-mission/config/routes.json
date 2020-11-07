@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/character-lines-on-missions",
+      "handler": "character-lines-on-mission.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-lines-on-missions/count",
+      "handler": "character-lines-on-mission.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-lines-on-missions/:id",
+      "handler": "character-lines-on-mission.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/character-lines-on-missions",
+      "handler": "character-lines-on-mission.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/character-lines-on-missions/:id",
+      "handler": "character-lines-on-mission.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/character-lines-on-missions/:id",
+      "handler": "character-lines-on-mission.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

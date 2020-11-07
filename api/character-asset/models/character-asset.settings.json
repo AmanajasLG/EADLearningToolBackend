@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_assets",
+  "info": {
+    "name": "characterAsset",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "layerDepth": {
+      "type": "integer"
+    },
+    "personagems": {
+      "collection": "personagem",
+      "via": "character_assets",
+      "dominant": true
+    }
+  }
+}

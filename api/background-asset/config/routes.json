@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/background-assets",
+      "handler": "background-asset.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/background-assets/count",
+      "handler": "background-asset.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/background-assets/:id",
+      "handler": "background-asset.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/background-assets",
+      "handler": "background-asset.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/background-assets/:id",
+      "handler": "background-asset.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/background-assets/:id",
+      "handler": "background-asset.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
