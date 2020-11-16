@@ -18,26 +18,26 @@
       "type": "richtext"
     },
     "personagems": {
-      "collection": "personagem",
       "via": "missions",
+      "collection": "personagem",
       "dominant": true
     },
     "locations": {
-      "via": "missions",
       "collection": "location",
+      "via": "missions",
       "dominant": true
     },
     "game": {
-      "via": "missions",
-      "model": "game"
+      "model": "game",
+      "via": "missions"
     },
-    "character_lines_on_missions": {
-      "via": "mission",
-      "collection": "character-lines-on-mission"
+    "characterLinesOnMissions": {
+      "collection": "character-lines-on-mission",
+      "via": "mission"
     },
-    "play_sessions": {
-      "via": "mission",
-      "collection": "play-session"
+    "playSessions": {
+      "collection": "play-session",
+      "via": "mission"
     }
   }
 }

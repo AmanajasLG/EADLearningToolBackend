@@ -59,9 +59,15 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "play_sessions": {
-      "via": "users_permissions_user",
-      "collection": "play-session"
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "playSessions": {
+      "collection": "play-session",
+      "via": "usersPermissionsUser"
     }
   }
 }

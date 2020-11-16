@@ -25,7 +25,7 @@
       "required": false
     },
     "locations": {
-      "via": "background_assets",
+      "via": "backgroundAssets",
       "collection": "location"
     }
   }

@@ -11,14 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nome": {
+    "name": {
       "type": "string"
     },
     "missions": {
-      "collection": "mission",
-      "via": "game"
+      "via": "game",
+      "collection": "mission"
     },
-    "play_sessions": {
+    "playSessions": {
       "via": "game",
       "collection": "play-session"
     }

@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nome": {
+    "name": {
       "type": "string"
     },
     "civilState": {
@@ -30,16 +30,16 @@
       "type": "string"
     },
     "missions": {
-      "via": "personagems",
-      "collection": "mission"
+      "collection": "mission",
+      "via": "personagems"
     },
-    "character_assets": {
-      "via": "personagems",
-      "collection": "character-asset"
+    "characterAssets": {
+      "collection": "character-asset",
+      "via": "personagems"
     },
-    "character_lines_on_mission": {
-      "via": "personagems",
-      "model": "character-lines-on-mission"
+    "characterLinesOnMission": {
+      "model": "character-lines-on-mission",
+      "via": "personagems"
     }
   }
 }

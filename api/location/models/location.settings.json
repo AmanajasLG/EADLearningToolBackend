@@ -14,14 +14,14 @@
     "name": {
       "type": "string"
     },
-    "background_assets": {
+    "backgroundAssets": {
       "collection": "background-asset",
       "via": "locations",
       "dominant": true
     },
     "missions": {
-      "collection": "mission",
-      "via": "locations"
+      "via": "locations",
+      "collection": "mission"
     },
     "personagems": {
       "collection": "personagem"

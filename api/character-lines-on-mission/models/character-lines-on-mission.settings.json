@@ -14,12 +14,12 @@
       "type": "richtext"
     },
     "mission": {
-      "model": "mission",
-      "via": "character_lines_on_missions"
+      "via": "characterLinesOnMissions",
+      "model": "mission"
     },
     "personagems": {
-      "collection": "personagem",
-      "via": "character_lines_on_mission"
+      "via": "characterLinesOnMission",
+      "collection": "personagem"
     }
   }
 }

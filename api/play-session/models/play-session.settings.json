@@ -25,18 +25,18 @@
       "type": "boolean",
       "default": false
     },
-    "mission": {
-      "model": "mission",
-      "via": "play_sessions"
+    "usersPermissionsUser": {
+      "via": "playSessions",
+      "plugin": "users-permissions",
+      "model": "user"
     },
     "game": {
       "model": "game",
-      "via": "play_sessions"
+      "via": "playSessions"
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "play_sessions"
+    "mission": {
+      "via": "playSessions",
+      "model": "mission"
     }
   }
 }
