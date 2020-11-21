@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "personagems",
   "info": {
-    "name": "personagem",
+    "name": "Character",
     "description": ""
   },
   "options": {
@@ -29,17 +29,17 @@
     "country": {
       "type": "string"
     },
-    "missions": {
-      "collection": "mission",
-      "via": "personagems"
-    },
     "characterAssets": {
-      "collection": "character-asset",
-      "via": "personagems"
+      "via": "characters",
+      "collection": "character-asset"
     },
     "characterLinesOnMission": {
-      "model": "character-lines-on-mission",
-      "via": "personagems"
+      "via": "characters",
+      "model": "character-lines-on-mission"
+    },
+    "missions": {
+      "via": "characters",
+      "collection": "mission"
     }
   }
 }

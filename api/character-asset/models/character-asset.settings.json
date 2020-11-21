@@ -28,9 +28,9 @@
     "layerDepth": {
       "type": "integer"
     },
-    "personagems": {
-      "via": "characterAssets",
+    "characters": {
       "collection": "personagem",
+      "via": "characterAssets",
       "dominant": true
     }
   }

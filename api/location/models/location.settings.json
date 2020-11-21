@@ -23,7 +23,7 @@
       "via": "locations",
       "collection": "mission"
     },
-    "personagems": {
+    "characters": {
       "collection": "personagem"
     }
   }

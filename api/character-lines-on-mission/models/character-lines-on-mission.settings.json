@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "character_lines_on_missions",
   "info": {
-    "name": "characterLinesOnMission"
+    "name": "characterLinesOnMission",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,9 +18,9 @@
       "via": "characterLinesOnMissions",
       "model": "mission"
     },
-    "personagems": {
-      "via": "characterLinesOnMission",
-      "collection": "personagem"
+    "characters": {
+      "collection": "personagem",
+      "via": "characterLinesOnMission"
     }
   }
 }

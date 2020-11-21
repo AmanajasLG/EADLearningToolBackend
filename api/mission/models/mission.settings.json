@@ -17,9 +17,9 @@
     "description": {
       "type": "richtext"
     },
-    "personagems": {
-      "via": "missions",
+    "characters": {
       "collection": "personagem",
+      "via": "missions",
       "dominant": true
     },
     "locations": {

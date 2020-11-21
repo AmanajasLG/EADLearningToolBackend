@@ -21,6 +21,10 @@
     "playSessions": {
       "via": "game",
       "collection": "play-session"
+    },
+    "questions": {
+      "via": "game",
+      "collection": "question"
     }
   }
 }
