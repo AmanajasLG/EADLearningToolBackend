@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/personagems",
-      "handler": "personagem.find",
+      "path": "/characters",
+      "handler": "character.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/personagems/count",
-      "handler": "personagem.count",
+      "path": "/characters/count",
+      "handler": "character.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/personagems/:id",
-      "handler": "personagem.findOne",
+      "path": "/characters/:id",
+      "handler": "character.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/personagems",
-      "handler": "personagem.create",
+      "path": "/characters",
+      "handler": "character.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/personagems/:id",
-      "handler": "personagem.update",
+      "path": "/characters/:id",
+      "handler": "character.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/personagems/:id",
-      "handler": "personagem.delete",
+      "path": "/characters/:id",
+      "handler": "character.delete",
       "config": {
         "policies": []
       }

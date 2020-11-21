@@ -17,11 +17,7 @@
     "image": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false
     },
@@ -29,7 +25,7 @@
       "type": "integer"
     },
     "characters": {
-      "collection": "personagem",
+      "collection": "character",
       "via": "characterAssets",
       "dominant": true
     }

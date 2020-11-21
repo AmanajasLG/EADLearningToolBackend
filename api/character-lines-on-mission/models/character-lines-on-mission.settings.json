@@ -19,7 +19,7 @@
       "model": "mission"
     },
     "characters": {
-      "collection": "personagem",
+      "collection": "character",
       "via": "characterLinesOnMission"
     }
   }

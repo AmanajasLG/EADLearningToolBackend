@@ -24,7 +24,7 @@
       "collection": "mission"
     },
     "characters": {
-      "collection": "personagem"
+      "collection": "character"
     }
   }
 }

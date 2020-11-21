@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "personagems",
+  "collectionName": "characters",
   "info": {
     "name": "Character",
     "description": ""
@@ -16,12 +16,7 @@
     },
     "civilState": {
       "type": "enumeration",
-      "enum": [
-        "single",
-        "married",
-        "divorced",
-        "widowed"
-      ]
+      "enum": ["single", "married", "divorced", "widowed"]
     },
     "job": {
       "type": "string"
