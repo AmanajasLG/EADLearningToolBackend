@@ -16,7 +16,12 @@
     },
     "civilState": {
       "type": "enumeration",
-      "enum": ["single", "married", "divorced", "widowed"]
+      "enum": [
+        "single",
+        "married",
+        "divorced",
+        "widowed"
+      ]
     },
     "job": {
       "type": "string"
@@ -25,16 +30,24 @@
       "type": "string"
     },
     "characterAssets": {
-      "via": "characters",
-      "collection": "character-asset"
+      "collection": "character-asset",
+      "via": "characters"
     },
     "characterLinesOnMission": {
-      "via": "characters",
-      "model": "character-lines-on-mission"
+      "model": "character-lines-on-mission",
+      "via": "characters"
     },
     "missions": {
-      "via": "characters",
-      "collection": "mission"
+      "collection": "mission",
+      "via": "characters"
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-list.answers"
+    },
+    "finalAnswer": {
+      "type": "string"
     }
   }
 }

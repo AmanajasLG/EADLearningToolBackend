@@ -19,8 +19,8 @@
       "model": "mission"
     },
     "characters": {
-      "collection": "character",
-      "via": "characterLinesOnMission"
+      "via": "characterLinesOnMission",
+      "collection": "character"
     }
   }
 }

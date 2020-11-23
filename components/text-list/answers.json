@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_text_list_answers",
+  "info": {
+    "name": "answers",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "answer": {
+      "type": "string"
+    },
+    "question": {
+      "model": "question"
+    }
+  }
+}
