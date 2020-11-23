@@ -18,8 +18,8 @@
       "type": "richtext"
     },
     "characters": {
-      "via": "missions",
       "collection": "character",
+      "via": "missions",
       "dominant": true
     },
     "locations": {
@@ -38,6 +38,11 @@
     "playSessions": {
       "collection": "play-session",
       "via": "mission"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "missions",
+      "dominant": true
     }
   }
 }

@@ -38,8 +38,8 @@
       "via": "characters"
     },
     "missions": {
-      "collection": "mission",
-      "via": "characters"
+      "via": "characters",
+      "collection": "mission"
     },
     "answers": {
       "type": "component",
