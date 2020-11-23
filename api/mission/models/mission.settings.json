@@ -40,8 +40,8 @@
       "via": "mission"
     },
     "questions": {
-      "collection": "question",
       "via": "missions",
+      "collection": "question",
       "dominant": true
     }
   }

@@ -14,10 +14,6 @@
     "question": {
       "type": "string"
     },
-    "game": {
-      "model": "game",
-      "via": "questions"
-    },
     "group": {
       "type": "integer"
     },
@@ -25,8 +21,8 @@
       "type": "boolean"
     },
     "missions": {
-      "via": "questions",
-      "collection": "mission"
+      "collection": "mission",
+      "via": "questions"
     }
   }
 }
