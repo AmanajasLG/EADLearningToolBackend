@@ -14,17 +14,12 @@
     "question": {
       "type": "string"
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "greeting",
-        "greatingAnswer",
-        "conversation"
-      ]
-    },
     "game": {
       "model": "game",
       "via": "questions"
+    },
+    "group": {
+      "type": "integer"
     }
   }
 }
