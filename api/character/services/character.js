@@ -33,9 +33,11 @@ module.exports = {
         model: 'character',
         // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
       });
-      return this.findOne({ id: entry.id });
+      let result = this.findOne({ id: entry.id });
+      console.log('result:', result)
+      return result;
     }
-
+    console.log('entry:', entry)
     return entry;
   }
 };
