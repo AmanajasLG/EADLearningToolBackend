@@ -14,13 +14,11 @@ module.exports = {
 
 
   findOne(params, populate) {
-    console.log('findOne called')
     let p = [{path: 'missions', populate: 'questions'}]
     return strapi.query('character').findOne(params, p);
   },
 
   async update(params, data, { files } = {}) {
-    console.log('update called')
     const validData = await strapi.entityValidator.validateEntityUpdate(
       strapi.models.character,
       data
@@ -34,11 +32,10 @@ module.exports = {
         // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
       });
       let result = this.findOne({ id: entry.id });
-      console.log('result:', result)
       return result;
     }
+    //EADLearningTool application calls findOne in order to populate
     let result = this.findOne({ id: entry.id });
-    console.log('result2:', result)
     return result;
   }
 };
