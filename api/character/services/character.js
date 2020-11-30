@@ -13,6 +13,6 @@ module.exports = {
 
   findOne(params, populate) {
     let p = [{path: 'missions', populate: 'questions'}]
-    return strapi.query('restaurant').findOne(params, p);
-  }
+    return strapi.query('character').findOne(params, p);
+  },
 };
