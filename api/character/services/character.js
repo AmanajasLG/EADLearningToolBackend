@@ -5,4 +5,9 @@
  * to customize this service
  */
 
-module.exports = {};
+module.exports = {
+  find(params, populate) {
+    let p = [{path: 'missions', populate: 'questions'}]
+    return strapi.query('character').find(params, p);
+  }
+};
