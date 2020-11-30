@@ -9,5 +9,10 @@ module.exports = {
   find(params, populate) {
     let p = [{path: 'missions', populate: 'questions'}]
     return strapi.query('character').find(params, p);
+  },
+
+  findOne(params, populate) {
+    let p = [{path: 'missions', populate: 'questions'}]
+    return strapi.query('restaurant').findOne(params, p);
   }
 };
