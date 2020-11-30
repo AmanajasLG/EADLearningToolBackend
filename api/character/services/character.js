@@ -37,7 +37,8 @@ module.exports = {
       console.log('result:', result)
       return result;
     }
-    console.log('entry:', entry)
-    return entry;
+    let result = this.findOne({ id: entry.id });
+    console.log('result2:', result)
+    return result;
   }
 };
