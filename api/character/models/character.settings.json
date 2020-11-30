@@ -38,12 +38,12 @@
       "via": "characters"
     },
     "missions": {
-      "via": "characters",
-      "collection": "mission"
+      "collection": "mission",
+      "via": "characters"
     },
     "answers": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "text-list.answers"
     },
     "finalAnswer": {

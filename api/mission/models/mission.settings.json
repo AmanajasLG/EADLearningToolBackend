@@ -18,8 +18,8 @@
       "type": "richtext"
     },
     "characters": {
-      "collection": "character",
       "via": "missions",
+      "collection": "character",
       "dominant": true
     },
     "locations": {
