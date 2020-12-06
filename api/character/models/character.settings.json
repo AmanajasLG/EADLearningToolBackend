@@ -30,8 +30,8 @@
       "type": "string"
     },
     "characterAssets": {
-      "collection": "character-asset",
-      "via": "characters"
+      "via": "characters",
+      "collection": "character-asset"
     },
     "characterLinesOnMission": {
       "model": "character-lines-on-mission",

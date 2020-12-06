@@ -29,9 +29,12 @@
       "type": "integer"
     },
     "characters": {
-      "via": "characterAssets",
       "collection": "character",
+      "via": "characterAssets",
       "dominant": true
+    },
+    "link": {
+      "type": "string"
     }
   }
 }
