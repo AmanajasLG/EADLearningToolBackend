@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questionnaire_questions",
+  "info": {
+    "name": "QuestionnaireQuestion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "QuestionnaireAnswer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-list.questionnaire-answer"
+    },
+    "questionnaire": {
+      "via": "questionnaireQuestions",
+      "model": "questionnaire"
+    }
+  }
+}
