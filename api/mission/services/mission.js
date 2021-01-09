@@ -5,4 +5,16 @@
  * to customize this service
  */
 
-module.exports = {};
+module.exports = {
+  find(params, populate) {
+    let p = [{path: 'locations', populate: 'backgroundAssets'}, 'characterAssets']
+    return strapi.query('mission').find(params, p);
+  },
+
+
+
+  findOne(params, populate) {
+    let p = [{path: 'locations', populate: 'backgroundAssets'}, 'characterAssets']
+    return strapi.query('mission').findOne(params, p);
+  },
+};
