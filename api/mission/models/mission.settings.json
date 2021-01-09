@@ -23,8 +23,8 @@
       "dominant": true
     },
     "locations": {
-      "collection": "location",
       "via": "missions",
+      "collection": "location",
       "dominant": true
     },
     "game": {

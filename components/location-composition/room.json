@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_location_composition_rooms",
+  "info": {
+    "name": "room",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "model": "location"
+    },
+    "characters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "selected-characters.group"
+    }
+  }
+}

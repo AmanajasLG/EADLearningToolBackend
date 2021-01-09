@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_selected_characters_groups",
+  "info": {
+    "name": "group",
+    "icon": "child"
+  },
+  "options": {},
+  "attributes": {
+    "character": {
+      "model": "character"
+    }
+  }
+}
