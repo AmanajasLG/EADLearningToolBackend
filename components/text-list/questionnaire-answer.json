@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_text_list_questionnaire_answers",
+  "info": {
+    "name": "QuestionnaireAnswer",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "answer": {
+      "type": "string"
+    }
+  }
+}

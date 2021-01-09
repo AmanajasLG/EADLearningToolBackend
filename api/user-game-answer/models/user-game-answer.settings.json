@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_game_answers",
+  "info": {
+    "name": "UserGameAnswer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "model": "question"
+    },
+    "character": {
+      "model": "character"
+    },
+    "playSession": {
+      "model": "play-session",
+      "via": "userGameAnswer"
+    }
+  }
+}

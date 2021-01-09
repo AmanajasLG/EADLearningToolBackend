@@ -14,6 +14,14 @@
     "name": {
       "type": "string"
     },
+    "layerDepth": {
+      "type": "integer"
+    },
+    "characters": {
+      "collection": "character",
+      "via": "characterAssets",
+      "dominant": true
+    },
     "image": {
       "collection": "file",
       "via": "related",
@@ -24,17 +32,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "layerDepth": {
-      "type": "integer"
-    },
-    "characters": {
-      "collection": "character",
-      "via": "characterAssets",
-      "dominant": true
-    },
-    "link": {
-      "type": "string"
     }
   }
 }

@@ -15,8 +15,8 @@
       "type": "string"
     },
     "backgroundAssets": {
-      "collection": "background-asset",
       "via": "locations",
+      "collection": "background-asset",
       "dominant": true
     },
     "missions": {

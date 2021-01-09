@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "games",
+  "collectionName": "user_questionnaire_answers",
   "info": {
-    "name": "game",
+    "name": "UserQuestionnaireAnswer",
     "description": ""
   },
   "options": {
@@ -11,19 +11,17 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "answer": {
       "type": "string"
     },
-    "missions": {
-      "via": "game",
-      "collection": "mission"
+    "questionnaireQuestion": {
+      "model": "questionnaire-question"
     },
-    "playSessions": {
-      "via": "game",
-      "collection": "play-session"
+    "playSession": {
+      "model": "play-session",
+      "via": "userQuestionnaireAnswer"
     },
     "questionnaire": {
-      "via": "game",
       "model": "questionnaire"
     }
   }

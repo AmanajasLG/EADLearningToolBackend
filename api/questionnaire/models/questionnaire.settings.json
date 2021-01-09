@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questionnaires",
+  "info": {
+    "name": "Questionnaire",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "game": {
+      "model": "game",
+      "via": "questionnaire"
+    },
+    "questionnaireQuestions": {
+      "collection": "questionnaire-question",
+      "via": "questionnaire"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-game-answers",
+      "handler": "user-game-answer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-game-answers/count",
+      "handler": "user-game-answer.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-game-answers/:id",
+      "handler": "user-game-answer.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-game-answers",
+      "handler": "user-game-answer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-game-answers/:id",
+      "handler": "user-game-answer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-game-answers/:id",
+      "handler": "user-game-answer.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
