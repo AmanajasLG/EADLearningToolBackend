@@ -30,8 +30,8 @@
       "type": "string"
     },
     "characterAssets": {
-      "via": "characters",
-      "collection": "character-asset"
+      "collection": "character-asset",
+      "via": "characters"
     },
     "characterLinesOnMission": {
       "model": "character-lines-on-mission",
@@ -46,7 +46,19 @@
       "repeatable": true,
       "component": "text-list.answers"
     },
-    "finalAnswer": {
+    "wrongAnswer": {
+      "type": "string"
+    },
+    "rightAnswer": {
+      "type": "string"
+    },
+    "tip": {
+      "type": "string"
+    },
+    "acusationAnswer": {
+      "type": "string"
+    },
+    "endDialog": {
       "type": "string"
     }
   }
