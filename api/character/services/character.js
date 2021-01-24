@@ -11,8 +11,6 @@ module.exports = {
     return strapi.query('character').find(params, p);
   },
 
-
-
   findOne(params, populate) {
     let p = [{path: 'missions', populate: 'questions'}, 'characterAssets']
     return strapi.query('character').findOne(params, p);

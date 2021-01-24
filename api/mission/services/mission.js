@@ -7,14 +7,12 @@
 
 module.exports = {
   find(params, populate) {
-    let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'characters', populate: 'characterAssets'}]
+    let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'characters', populate: 'characterAssets'}, 'questions']
     return strapi.query('mission').find(params, p);
   },
 
-
-
   findOne(params, populate) {
-    let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'characters', populate: 'characterAssets'}]
+    let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'characters', populate: 'characterAssets'}, 'questions']
     return strapi.query('mission').findOne(params, p);
   },
 };
