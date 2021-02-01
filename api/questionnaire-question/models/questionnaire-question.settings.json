@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "questionnaire_questions",
   "info": {
-    "name": "QuestionnaireQuestion"
+    "name": "QuestionnaireQuestion",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,9 +19,13 @@
       "repeatable": true,
       "component": "text-list.questionnaire-answer"
     },
-    "questionnaire": {
+    "questionnaires": {
+      "collection": "questionnaire",
       "via": "questionnaireQuestions",
-      "model": "questionnaire"
+      "dominant": true
+    },
+    "default": {
+      "type": "boolean"
     }
   }
 }

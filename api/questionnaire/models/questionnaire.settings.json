@@ -16,8 +16,8 @@
       "via": "questionnaire"
     },
     "questionnaireQuestions": {
-      "collection": "questionnaire-question",
-      "via": "questionnaire"
+      "via": "questionnaires",
+      "collection": "questionnaire-question"
     }
   }
 }
