@@ -14,7 +14,7 @@
     "question": {
       "type": "string"
     },
-    "QuestionnaireAnswer": {
+    "questionnaireAnswers": {
       "type": "component",
       "repeatable": true,
       "component": "text-list.questionnaire-answer"

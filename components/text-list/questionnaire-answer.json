@@ -2,7 +2,8 @@
   "collectionName": "components_text_list_questionnaire_answers",
   "info": {
     "name": "QuestionnaireAnswer",
-    "icon": "align-justify"
+    "icon": "align-justify",
+    "description": ""
   },
   "options": {},
   "attributes": {
