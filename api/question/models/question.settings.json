@@ -21,8 +21,8 @@
       "type": "boolean"
     },
     "missions": {
-      "collection": "mission",
-      "via": "questions"
+      "via": "questions",
+      "collection": "mission"
     }
   }
 }

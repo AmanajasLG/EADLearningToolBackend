@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "missions",
   "info": {
-    "name": "mission",
+    "name": "game2mission",
     "description": ""
   },
   "options": {
@@ -18,13 +18,13 @@
       "type": "richtext"
     },
     "characters": {
-      "via": "missions",
       "collection": "character",
+      "via": "missions",
       "dominant": true
     },
     "locations": {
-      "via": "missions",
       "collection": "location",
+      "via": "missions",
       "dominant": true
     },
     "game": {
@@ -40,8 +40,8 @@
       "via": "mission"
     },
     "questions": {
-      "via": "missions",
       "collection": "question",
+      "via": "missions",
       "dominant": true
     }
   }
