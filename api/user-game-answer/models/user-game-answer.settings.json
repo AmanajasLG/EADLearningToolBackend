@@ -18,8 +18,8 @@
       "model": "character"
     },
     "playSession": {
-      "model": "play-session",
-      "via": "userGameAnswer"
+      "via": "userGameAnswer",
+      "model": "play-session"
     }
   }
 }

@@ -26,25 +26,30 @@
       "default": false
     },
     "usersPermissionsUser": {
-      "via": "playSessions",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "playSessions"
     },
     "game": {
       "model": "game",
       "via": "playSessions"
     },
     "mission": {
-      "via": "playSessions",
-      "model": "mission"
+      "model": "mission",
+      "via": "playSessions"
     },
     "userGameAnswer": {
-      "via": "playSession",
-      "model": "user-game-answer"
+      "model": "user-game-answer",
+      "via": "playSession"
     },
     "userQuestionnaireAnswer": {
-      "via": "playSession",
-      "model": "user-questionnaire-answer"
+      "model": "user-questionnaire-answer",
+      "via": "playSession"
+    },
+    "playerActions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "json-data.player-action"
     }
   }
 }

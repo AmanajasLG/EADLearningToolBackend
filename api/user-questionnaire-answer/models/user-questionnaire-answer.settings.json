@@ -18,8 +18,8 @@
       "model": "questionnaire-question"
     },
     "playSession": {
-      "model": "play-session",
-      "via": "userQuestionnaireAnswer"
+      "via": "userQuestionnaireAnswer",
+      "model": "play-session"
     },
     "questionnaire": {
       "model": "questionnaire"

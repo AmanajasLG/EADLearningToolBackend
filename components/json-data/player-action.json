@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_json_data_player_actions",
+  "info": {
+    "name": "playerAction",
+    "icon": "copy"
+  },
+  "options": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}
