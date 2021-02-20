@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "game2missions",
+  "collectionName": "missions",
   "info": {
-    "name": "game2mission",
+    "name": "mission",
     "description": ""
   },
   "options": {
@@ -36,8 +36,8 @@
       "via": "mission"
     },
     "playSessions": {
-      "via": "mission",
-      "collection": "play-session"
+      "collection": "play-session",
+      "via": "mission"
     },
     "questions": {
       "collection": "question",

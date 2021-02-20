@@ -35,8 +35,8 @@
       "via": "playSessions"
     },
     "mission": {
-      "model": "mission",
-      "via": "playSessions"
+      "via": "playSessions",
+      "model": "mission"
     },
     "userGameAnswer": {
       "model": "user-game-answer",
