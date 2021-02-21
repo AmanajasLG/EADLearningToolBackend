@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "player_actions",
+  "info": {
+    "name": "playerAction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "play_session": {
+      "via": "player_actions",
+      "model": "play-session"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}

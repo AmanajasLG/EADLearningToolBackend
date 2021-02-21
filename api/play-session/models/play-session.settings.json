@@ -46,8 +46,9 @@
       "model": "user-questionnaire-answer",
       "via": "playSession"
     },
-    "playerActions": {
-      "type": "json"
+    "player_actions": {
+      "collection": "player-action",
+      "via": "play_session"
     }
   }
 }
