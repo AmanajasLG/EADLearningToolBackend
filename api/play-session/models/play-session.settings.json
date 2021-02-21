@@ -47,8 +47,7 @@
       "via": "playSession"
     },
     "player_actions": {
-      "collection": "player-action",
-      "via": "play_session"
+      "collection": "player-action"
     }
   }
 }
