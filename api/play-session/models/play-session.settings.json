@@ -35,8 +35,8 @@
       "via": "playSessions"
     },
     "mission": {
-      "via": "playSessions",
-      "model": "mission"
+      "model": "mission",
+      "via": "playSessions"
     },
     "userGameAnswer": {
       "model": "user-game-answer",
@@ -47,9 +47,7 @@
       "via": "playSession"
     },
     "playerActions": {
-      "type": "component",
-      "repeatable": true,
-      "component": "json-data.player-action"
+      "type": "json"
     }
   }
 }
