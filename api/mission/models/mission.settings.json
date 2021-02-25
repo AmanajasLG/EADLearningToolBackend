@@ -43,6 +43,9 @@
       "collection": "question",
       "via": "missions",
       "dominant": true
+    },
+    "nameTranslate": {
+      "type": "string"
     }
   }
 }
