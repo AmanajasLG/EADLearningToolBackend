@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/background-audios",
+      "handler": "background-audio.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/background-audios/count",
+      "handler": "background-audio.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/background-audios/:id",
+      "handler": "background-audio.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/background-audios",
+      "handler": "background-audio.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/background-audios/:id",
+      "handler": "background-audio.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/background-audios/:id",
+      "handler": "background-audio.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
