@@ -18,8 +18,8 @@
       "type": "integer"
     },
     "characters": {
-      "via": "characterAssets",
       "collection": "character",
+      "via": "characterAssets",
       "dominant": true
     },
     "image": {
@@ -32,6 +32,24 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "bodyPart": {
+      "type": "enumeration",
+      "enum": [
+        "fullBody",
+        "upperBody",
+        "face"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "init",
+        "rightQuestion",
+        "wrongQuestion",
+        "rightAccusation",
+        "wrongAccusation"
+      ]
     }
   }
 }
