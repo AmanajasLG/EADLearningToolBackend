@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "background_audios",
+  "info": {
+    "name": "BackgroundAudio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "music": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "missions": {
+      "via": "backgroundAudios",
+      "collection": "mission"
+    }
+  }
+}

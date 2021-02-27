@@ -46,6 +46,11 @@
     },
     "nameTranslate": {
       "type": "string"
+    },
+    "backgroundAudios": {
+      "collection": "background-audio",
+      "via": "missions",
+      "dominant": true
     }
   }
 }
