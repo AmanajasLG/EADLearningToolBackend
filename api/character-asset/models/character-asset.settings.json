@@ -36,9 +36,8 @@
     "bodyPart": {
       "type": "enumeration",
       "enum": [
-        "fullBody",
-        "upperBody",
-        "face"
+        "fullbody",
+        "upperBody"
       ]
     },
     "type": {
