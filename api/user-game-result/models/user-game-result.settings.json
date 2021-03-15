@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_game_results",
+  "info": {
+    "name": "UserGameResult",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "mission": {
+      "model": "mission"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "tipsCount": {
+      "type": "integer"
+    },
+    "spokenCharactersCount": {
+      "type": "integer"
+    },
+    "tries": {
+      "type": "integer"
+    },
+    "won": {
+      "type": "boolean"
+    },
+    "validQuestionsCount": {
+      "type": "integer"
+    }
+  }
+}
