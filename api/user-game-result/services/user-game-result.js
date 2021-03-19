@@ -5,4 +5,14 @@
  * to customize this service
  */
 
-module.exports = {};
+module.exports = {
+  find(params, populate) {
+    let p = ['user', 'mission']
+    return strapi.query('user-game-result').find(params, p);
+  },
+
+  findOne(params, populate) {
+    let p = ['user', 'mission']
+    return strapi.query('user-game-result').findOne(params, p);
+  },
+};
