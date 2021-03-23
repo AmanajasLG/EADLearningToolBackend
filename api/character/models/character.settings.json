@@ -60,6 +60,10 @@
     },
     "endDialog": {
       "type": "string"
+    },
+    "game_1_missions": {
+      "via": "characters",
+      "collection": "game1missions"
     }
   }
 }

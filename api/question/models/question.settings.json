@@ -23,6 +23,10 @@
     "missions": {
       "via": "questions",
       "collection": "mission"
+    },
+    "game_1_missions": {
+      "via": "questions",
+      "collection": "game1missions"
     }
   }
 }

@@ -13,6 +13,19 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "characters": {
+      "collection": "character",
+      "via": "game_1_missions",
+      "dominant": true
+    },
+    "questions": {
+      "collection": "question",
+      "via": "game_1_missions",
+      "dominant": true
     }
   }
 }
