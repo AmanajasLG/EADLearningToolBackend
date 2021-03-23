@@ -22,6 +22,10 @@
     "missions": {
       "via": "locations",
       "collection": "mission"
+    },
+    "game_1_missions": {
+      "via": "locations",
+      "collection": "game1missions"
     }
   }
 }

@@ -26,6 +26,11 @@
       "collection": "question",
       "via": "game_1_missions",
       "dominant": true
+    },
+    "locations": {
+      "collection": "location",
+      "via": "game_1_missions",
+      "dominant": true
     }
   }
 }
