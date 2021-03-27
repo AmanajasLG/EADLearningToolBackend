@@ -51,6 +51,10 @@
       "collection": "background-audio",
       "via": "missions",
       "dominant": true
+    },
+    "missionCharacters": {
+      "via": "mission",
+      "collection": "mission-character"
     }
   }
 }

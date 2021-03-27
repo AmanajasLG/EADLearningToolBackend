@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mission-characters",
+      "handler": "mission-character.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-characters/count",
+      "handler": "mission-character.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-characters/:id",
+      "handler": "mission-character.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mission-characters",
+      "handler": "mission-character.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mission-characters/:id",
+      "handler": "mission-character.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mission-characters/:id",
+      "handler": "mission-character.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

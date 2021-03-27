@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mission_characters",
+  "info": {
+    "name": "MissionCharacter",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "mission": {
+      "model": "mission",
+      "via": "missionCharacters"
+    },
+    "character": {
+      "model": "character",
+      "via": "missionCharacters"
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-list.answers"
+    },
+    "tip": {
+      "type": "string"
+    },
+    "endDialog": {
+      "type": "string"
+    },
+    "wrongAcusationAnswer": {
+      "type": "string"
+    },
+    "wrongAnswer": {
+      "type": "string"
+    },
+    "rightAnswer": {
+      "type": "string"
+    },
+    "rightAcusationAnswer": {
+      "type": "string"
+    }
+  }
+}

@@ -64,6 +64,10 @@
     "game_1_missions": {
       "via": "characters",
       "collection": "game1missions"
+    },
+    "missionCharacters": {
+      "via": "character",
+      "collection": "mission-character"
     }
   }
 }
