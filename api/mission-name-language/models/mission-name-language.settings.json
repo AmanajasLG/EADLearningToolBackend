@@ -11,15 +11,15 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "mission": {
-      "via": "mission_name_languages",
-      "model": "mission"
-    },
     "name": {
       "type": "string"
     },
     "language": {
       "model": "language"
+    },
+    "mission": {
+      "via": "missionNameLanguages",
+      "model": "mission"
     }
   }
 }
