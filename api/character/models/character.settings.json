@@ -30,44 +30,21 @@
       "type": "string"
     },
     "characterAssets": {
-      "via": "characters",
-      "collection": "character-asset"
-    },
-    "characterLinesOnMission": {
-      "model": "character-lines-on-mission",
+      "collection": "character-asset",
       "via": "characters"
+    },
+    "game_1_missions": {
+      "collection": "game1missions",
+      "via": "characters"
+    },
+    "missionCharacters": {
+      "collection": "mission-character",
+      "via": "character"
     },
     "missions": {
       "via": "characters",
-      "collection": "mission"
-    },
-    "answers": {
-      "type": "component",
-      "repeatable": true,
-      "component": "text-list.answers"
-    },
-    "wrongAnswer": {
-      "type": "string"
-    },
-    "rightAnswer": {
-      "type": "string"
-    },
-    "tip": {
-      "type": "string"
-    },
-    "acusationAnswer": {
-      "type": "string"
-    },
-    "endDialog": {
-      "type": "string"
-    },
-    "game_1_missions": {
-      "via": "characters",
-      "collection": "game1missions"
-    },
-    "missionCharacters": {
-      "via": "character",
-      "collection": "mission-character"
+      "collection": "mission",
+      "dominant": true
     }
   }
 }

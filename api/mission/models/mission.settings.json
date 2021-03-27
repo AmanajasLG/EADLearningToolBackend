@@ -17,11 +17,6 @@
     "description": {
       "type": "richtext"
     },
-    "characters": {
-      "collection": "character",
-      "via": "missions",
-      "dominant": true
-    },
     "locations": {
       "collection": "location",
       "via": "missions",
@@ -30,10 +25,6 @@
     "game": {
       "model": "game",
       "via": "missions"
-    },
-    "characterLinesOnMissions": {
-      "collection": "character-lines-on-mission",
-      "via": "mission"
     },
     "playSessions": {
       "collection": "play-session",
@@ -44,17 +35,26 @@
       "via": "missions",
       "dominant": true
     },
-    "nameTranslate": {
-      "type": "string"
-    },
     "backgroundAudios": {
       "collection": "background-audio",
       "via": "missions",
       "dominant": true
     },
     "missionCharacters": {
+      "collection": "mission-character",
+      "via": "mission"
+    },
+    "characters": {
+      "collection": "character",
+      "via": "missions"
+    },
+    "mission_name_languages": {
+      "collection": "mission-name-language",
+      "via": "mission"
+    },
+    "mission_description_languages": {
       "via": "mission",
-      "collection": "mission-character"
+      "collection": "mission-description-language"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mission_name_languages",
+  "info": {
+    "name": "MissionNameLanguage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "mission": {
+      "via": "mission_name_languages",
+      "model": "mission"
+    },
+    "name": {
+      "type": "string"
+    },
+    "language": {
+      "model": "language"
+    }
+  }
+}

@@ -10,7 +10,7 @@ module.exports = {
     let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'missionCharacters', populate: {
       path: 'character',
       populate: 'characterAssets'
-    }}, 'questions', 'backgroundAudios']
+    }}, 'questions', 'backgroundAudios', 'missionNameLanguages','missionDescriptionLanguages']
     return strapi.query('mission').find(params, p);
   },
 
@@ -18,7 +18,7 @@ module.exports = {
     let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'missionCharacters', populate: {
       path: 'character',
       populate: 'characterAssets'
-    }}, 'questions', 'backgroundAudios']
+    }}, 'questions', 'backgroundAudios', 'missionNameLanguages','missionDescriptionLanguages']
     return strapi.query('mission').findOne(params, p);
   },
 };

@@ -18,8 +18,8 @@
       "type": "integer"
     },
     "characters": {
-      "collection": "character",
       "via": "characterAssets",
+      "collection": "character",
       "dominant": true
     },
     "image": {

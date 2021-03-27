@@ -18,8 +18,8 @@
       "type": "string"
     },
     "characters": {
-      "collection": "character",
       "via": "game_1_missions",
+      "collection": "character",
       "dominant": true
     },
     "questions": {

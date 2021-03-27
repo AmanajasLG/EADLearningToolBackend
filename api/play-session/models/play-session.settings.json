@@ -26,9 +26,9 @@
       "default": false
     },
     "usersPermissionsUser": {
+      "via": "playSessions",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "playSessions"
+      "model": "user"
     },
     "game": {
       "model": "game",

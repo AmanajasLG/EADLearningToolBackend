@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "character_lines_on_missions",
+  "collectionName": "languages",
   "info": {
-    "name": "characterLinesOnMission",
+    "name": "Language",
     "description": ""
   },
   "options": {
@@ -11,8 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "lines": {
-      "type": "richtext"
+    "lang": {
+      "type": "string"
+    },
+    "isoCode": {
+      "type": "string"
     }
   }
 }
