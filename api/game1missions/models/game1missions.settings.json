@@ -31,6 +31,10 @@
       "collection": "location",
       "via": "game_1_missions",
       "dominant": true
+    },
+    "game_1_mission_characters": {
+      "via": "game_1_mission",
+      "collection": "game1mission-character"
     }
   }
 }

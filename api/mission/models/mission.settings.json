@@ -55,10 +55,6 @@
     "missionDescriptionLanguages": {
       "collection": "mission-description-language",
       "via": "mission"
-    },
-    "game_1_mission_character": {
-      "via": "mission",
-      "model": "game1mission-character"
     }
   }
 }

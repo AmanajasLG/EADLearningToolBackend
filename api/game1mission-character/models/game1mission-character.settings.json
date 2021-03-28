@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "game1mission_characters",
   "info": {
-    "name": "game1missionCharacter"
+    "name": "game1missionCharacter",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -20,9 +21,9 @@
       "model": "character",
       "via": "game_1_mission_characters"
     },
-    "mission": {
-      "model": "mission",
-      "via": "game_1_mission_character"
+    "game_1_mission": {
+      "model": "game1missions",
+      "via": "game_1_mission_characters"
     }
   }
 }
