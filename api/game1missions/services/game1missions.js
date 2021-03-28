@@ -9,7 +9,7 @@ module.exports = {
   find(params, populate) {
     let p = [
       {path: 'locations', populate: 'backgroundAssets'},
-      {path: 'characters', populate: ['characterAssets', 'game1missionCharacters']},
+      {path: 'characters', populate: ['characterAssets', 'game_1_mission_characters']},
       'questions',
       'backgroundAudios'
     ]
@@ -19,7 +19,7 @@ module.exports = {
   findOne(params, populate) {
     let p = [
       {path: 'locations', populate: 'backgroundAssets'},
-      {path: 'characters', populate: ['characterAssets', 'game1missionCharacters']}, 
+      {path: 'characters', populate: ['characterAssets', 'game_1_mission_characters']},
       'questions',
       'backgroundAudios'
     ]

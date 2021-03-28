@@ -10,7 +10,8 @@ module.exports = {
     let p = [
       {path: 'missions', populate: 'questions'},
       {path:'game_1_missions', populate: 'questions'},
-      'characterAssets'
+      'characterAssets',
+      'game_1_mission_characters'
     ]
     return strapi.query('character').find(params, p);
   },
@@ -19,7 +20,8 @@ module.exports = {
     let p = [
       {path: 'missions', populate: 'questions'},
       {path:'game_1_missions', populate: 'questions'},
-      'characterAssets'
+      'characterAssets',
+      'game_1_mission_characters'
     ]
     return strapi.query('character').findOne(params, p);
   },
