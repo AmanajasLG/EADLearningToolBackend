@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game1mission_characters",
+  "info": {
+    "name": "game1missionCharacter"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "showJob": {
+      "type": "boolean"
+    },
+    "showCountry": {
+      "type": "boolean"
+    },
+    "character": {
+      "model": "character",
+      "via": "game_1_mission_characters"
+    },
+    "mission": {
+      "model": "mission",
+      "via": "game_1_mission_character"
+    }
+  }
+}

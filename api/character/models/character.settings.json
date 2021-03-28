@@ -45,6 +45,10 @@
       "via": "characters",
       "collection": "mission",
       "dominant": true
+    },
+    "game_1_mission_characters": {
+      "via": "character",
+      "collection": "game1mission-character"
     }
   }
 }
