@@ -11,7 +11,8 @@ module.exports = {
       {path: 'locations', populate: 'backgroundAssets'},
       {path: 'characters', populate: ['characterAssets', 'game_1_mission_characters']},
       'questions',
-      'backgroundAudios'
+      'backgroundAudios',
+      'game_1_mission_characters'
     ]
     return strapi.query('game1missions').find(params, p);
   },
@@ -21,7 +22,8 @@ module.exports = {
       {path: 'locations', populate: 'backgroundAssets'},
       {path: 'characters', populate: ['characterAssets', 'game_1_mission_characters']},
       'questions',
-      'backgroundAudios'
+      'backgroundAudios',
+      'game_1_mission_characters'
     ]
     return strapi.query('game1missions').findOne(params, p);
   },
