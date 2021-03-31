@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "questionnaires",
+  "collectionName": "questionnaire_defaults",
   "info": {
-    "name": "Questionnaire",
-    "description": ""
+    "name": "QuestionnaireDefault"
   },
   "options": {
     "increments": true,
@@ -11,10 +10,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "game": {
-      "model": "game",
-      "via": "questionnaire"
-    },
     "questionnaire": {
       "type": "richtext"
     }
