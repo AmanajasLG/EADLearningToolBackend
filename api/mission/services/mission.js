@@ -23,43 +23,53 @@ module.exports = {
   },
 
   async update(params, data) {
-    //how entry was
-    const existingEntry = await strapi.query('mission').findOne(params.id);
+    try{
+      //how entry was
+      const existingEntry = await strapi.query('mission').findOne(params.id);
 
-    //validation and cleaning, don't know exaclty
-    const draft = isDraft(existingEntry, strapi.models.mission);
+      //validation and cleaning, don't know exaclty
+      const draft = isDraft(existingEntry, strapi.models.mission);
 
-    const validData = await strapi.entityValidator.validateEntityUpdate(
-      strapi.models.mission,
-      data,
-      { draft }
-    );
+      const validData = await strapi.entityValidator.validateEntityUpdate(
+        strapi.models.mission,
+        data,
+        { draft }
+      );
 
-    //create a missionData for each new character added (characters are IDs)
-    validData.missionCharacters.map( async character => {
-      let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character === character.character )
+      //create a missionData for each new character added (characters are IDs)
+      validData.missionCharacters.map( async character => {
+        let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character === character.character )
 
-      if(!characterMissionData){
-        const characterDataEntry = await strapi.query('mission-character').create({
-          ...character,
-          character: character.character.id, 
-          mission: existingEntry.id,
-        });
+        if(!characterMissionData){
+          const characterDataEntry = await strapi.query('mission-character').create({
+            ...character,
+            character: character.character.id, 
+            mission: existingEntry.id,
+          });
 
-        return characterDataEntry.id
-      } 
-    })
+          return characterDataEntry.id
+        } 
+      })
 
-    //delete an existing missionData for each character removed
-    existingEntry.missionCharacters.map( async characterMissionData => {
-      if(!validData.missionCharacters.includes(characterMissionData.character)) {
-        await strapi.query('mission-character').delete({id: characterMissionData.id})
+      //delete an existing missionData for each character removed
+      existingEntry.missionCharacters.map( async characterMissionData => {
+        if(!validData.missionCharacters.includes(characterMissionData.character)) {
+          await strapi.query('mission-character').delete({id: characterMissionData.id})
+        }
+      })
+
+      const entry = await strapi.query('mission').update(params, validData);
+
+      return entry;
+    }catch(error){
+
+        let values=Object.values(error.errors)
+    
+        console.log('Error Field===========>',values[0].message)
+    
+        return ctx.response.badData([data], values[0].message)
+    
       }
-    })
-
-    const entry = await strapi.query('mission').update(params, validData);
-
-    return entry;
   },
 
   async create(params, data) {
