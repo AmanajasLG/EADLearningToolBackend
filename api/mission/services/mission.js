@@ -22,9 +22,9 @@ module.exports = {
     return strapi.query('mission').findOne(params, p);
   },
 
-  async update(params, data, { files } = {}) {
+  async update(params, data) {
     //how entry was
-    const existingEntry = await strapi.query('mission').findOne(params);
+    const existingEntry = await strapi.query('mission').findOne(params.id);
 
     //validation and cleaning, don't know exaclty
     const draft = isDraft(existingEntry, strapi.models.mission);
@@ -45,7 +45,9 @@ module.exports = {
           character: character.character.id, 
           mission: existingEntry.id,
         });
-      }
+
+        return characterDataEntry.id
+      } 
     })
 
     //delete an existing missionData for each character removed
@@ -57,19 +59,10 @@ module.exports = {
 
     const entry = await strapi.query('mission').update(params, validData);
 
-    if (files) {
-      // automatically uploads the files based on the entry and the model
-      await strapi.entityService.uploadFiles(entry, files, {
-        model: 'mission',
-        // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
-      });
-      return this.findOne({ id: entry.id });
-    }
-
     return entry;
   },
 
-  async create(params, data, { files } = {}) {
+  async create(params, data) {
     //how entry was
     const newEntry = await strapi.query('mission').create({});
 
@@ -92,19 +85,12 @@ module.exports = {
           character: character.character.id, 
           mission: newEntry.id,
         });
+
+        return characterDataEntry.id
       }
     })
 
-    const entry = await strapi.query('mission').update(params, validData);
-
-    if (files) {
-      // automatically uploads the files based on the entry and the model
-      await strapi.entityService.uploadFiles(entry, files, {
-        model: 'mission',
-        // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
-      });
-      return this.findOne({ id: entry.id });
-    }
+    const entry = await strapi.query('mission').create(params, validData);
 
     return entry;
   },
