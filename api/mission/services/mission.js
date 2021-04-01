@@ -21,4 +21,91 @@ module.exports = {
     }}, 'questions', 'backgroundAudios', 'missionNameLanguages','missionDescriptionLanguages']
     return strapi.query('mission').findOne(params, p);
   },
+
+  async update(params, data, { files } = {}) {
+    //how entry was
+    const existingEntry = await strapi.query('mission').findOne(params);
+
+    //validation and cleaning, don't know exaclty
+    const draft = isDraft(existingEntry, strapi.models.mission);
+
+    const validData = await strapi.entityValidator.validateEntityUpdate(
+      strapi.models.mission,
+      data,
+      { draft }
+    );
+
+    //create a missionData for each new character added (characters are IDs)
+    validData.characters.map( async character => {
+      let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character === character )
+
+      if(!characterMissionData){
+        const characterDataEntry = await strapi.query('mission-character').create({
+          ...character,
+          character: character.character.id, 
+          mission: existingEntry.id,
+        });
+      }
+    })
+
+    //delete an existing missionData for each character removed
+    existingEntry.missionCharacters.map( async characterMissionData => {
+      if(!validData.missionCharacters.includes(characterMissionData.character)) {
+        await strapi.query('mission-character').delete({id: characterMissionData.id})
+      }
+    })
+
+    const entry = await strapi.query('mission').update(params, validData);
+
+    if (files) {
+      // automatically uploads the files based on the entry and the model
+      await strapi.entityService.uploadFiles(entry, files, {
+        model: 'mission',
+        // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+      });
+      return this.findOne({ id: entry.id });
+    }
+
+    return entry;
+  },
+
+  async create(params, data, { files } = {}) {
+    //how entry was
+    const newEntry = await strapi.query('mission').create({});
+
+    //validation and cleaning, don't know exaclty
+    const draft = isDraft(newEntry, strapi.models.mission);
+
+    const validData = await strapi.entityValidator.validateEntityUpdate(
+      strapi.models.mission,
+      data,
+      { draft }
+    );
+
+    //create a missionData for each new character added (characters are IDs)
+    validData.missionCharacters.map( async character => {
+      let characterMissionData = newEntry.missionCharacters.find( missionData => missionData.character === character )
+
+      if(!characterMissionData){
+        const characterDataEntry = await strapi.query('mission-character').create({
+          ...character,
+          character: character.character.id, 
+          mission: newEntry.id,
+        });
+      }
+    })
+
+    const entry = await strapi.query('mission').update(params, validData);
+
+    if (files) {
+      // automatically uploads the files based on the entry and the model
+      await strapi.entityService.uploadFiles(entry, files, {
+        model: 'mission',
+        // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+      });
+      return this.findOne({ id: entry.id });
+    }
+
+    return entry;
+  },
 };

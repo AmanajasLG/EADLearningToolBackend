@@ -12,12 +12,12 @@
   },
   "attributes": {
     "mission": {
-      "via": "missionCharacters",
-      "model": "mission"
+      "model": "mission",
+      "via": "missionCharacters"
     },
     "character": {
-      "via": "missionCharacters",
-      "model": "character"
+      "model": "character",
+      "via": "missionCharacters"
     },
     "answers": {
       "type": "component",
@@ -41,6 +41,9 @@
     },
     "rightAcusationAnswer": {
       "type": "string"
+    },
+    "targetCharacter": {
+      "type": "boolean"
     }
   }
 }
