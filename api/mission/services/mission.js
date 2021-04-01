@@ -36,8 +36,8 @@ module.exports = {
     );
 
     //create a missionData for each new character added (characters are IDs)
-    validData.characters.map( async character => {
-      let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character === character )
+    validData.missionCharacters.map( async character => {
+      let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character === character.character )
 
       if(!characterMissionData){
         const characterDataEntry = await strapi.query('mission-character').create({
