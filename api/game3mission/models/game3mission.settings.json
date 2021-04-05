@@ -29,6 +29,11 @@
     },
     "seconds": {
       "type": "integer"
+    },
+    "moneyTypes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "money-type.money-type"
     }
   }
 }
