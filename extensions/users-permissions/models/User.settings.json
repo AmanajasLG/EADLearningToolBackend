@@ -66,8 +66,11 @@
       "type": "string"
     },
     "playSessions": {
-      "via": "usersPermissionsUser",
-      "collection": "play-session"
+      "collection": "play-session",
+      "via": "usersPermissionsUser"
+    },
+    "language": {
+      "model": "language"
     }
   }
 }

@@ -19,11 +19,6 @@
       "repeatable": true,
       "component": "text-list.questionnaire-answer"
     },
-    "questionnaires": {
-      "collection": "questionnaire",
-      "via": "questionnaireQuestions",
-      "dominant": true
-    },
     "default": {
       "type": "boolean"
     }

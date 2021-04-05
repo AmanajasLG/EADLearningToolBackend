@@ -38,8 +38,8 @@
       "via": "characters"
     },
     "missionCharacters": {
-      "collection": "mission-character",
-      "via": "character"
+      "via": "character",
+      "collection": "mission-character"
     },
     "missions": {
       "via": "characters",

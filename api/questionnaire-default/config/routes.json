@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/questionnaire-defaults",
+      "handler": "questionnaire-default.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/questionnaire-defaults/count",
+      "handler": "questionnaire-default.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/questionnaire-defaults/:id",
+      "handler": "questionnaire-default.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/questionnaire-defaults",
+      "handler": "questionnaire-default.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/questionnaire-defaults/:id",
+      "handler": "questionnaire-default.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/questionnaire-defaults/:id",
+      "handler": "questionnaire-default.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

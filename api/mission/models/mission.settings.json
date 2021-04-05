@@ -41,8 +41,8 @@
       "dominant": true
     },
     "missionCharacters": {
-      "collection": "mission-character",
-      "via": "mission"
+      "via": "mission",
+      "collection": "mission-character"
     },
     "characters": {
       "collection": "character",
