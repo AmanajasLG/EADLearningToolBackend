@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_store_session_store_sessions",
+  "info": {
+    "name": "storeSession",
+    "icon": "shoe-prints"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shop-item.shop-item"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/game-3-missions",
+      "handler": "game3mission.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/game-3-missions/count",
+      "handler": "game3mission.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/game-3-missions/:id",
+      "handler": "game3mission.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/game-3-missions",
+      "handler": "game3mission.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/game-3-missions/:id",
+      "handler": "game3mission.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/game-3-missions/:id",
+      "handler": "game3mission.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

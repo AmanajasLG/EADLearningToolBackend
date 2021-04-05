@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game3missions",
+  "info": {
+    "name": "game3mission",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "item-quantity.ingredient"
+    },
+    "aisles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store-session.store-session"
+    },
+    "seconds": {
+      "type": "integer"
+    }
+  }
+}

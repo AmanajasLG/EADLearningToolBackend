@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shop_item_shop_items",
+  "info": {
+    "name": "shopItem",
+    "icon": "cart-plus"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}
