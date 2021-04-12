@@ -18,8 +18,8 @@
       "type": "richtext"
     },
     "locations": {
-      "collection": "location",
       "via": "missions",
+      "collection": "location",
       "dominant": true
     },
     "game": {

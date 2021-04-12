@@ -15,8 +15,8 @@
       "type": "string"
     },
     "locations": {
-      "collection": "location",
-      "via": "backgroundAssets"
+      "via": "backgroundAssets",
+      "collection": "location"
     },
     "image": {
       "collection": "file",
