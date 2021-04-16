@@ -57,7 +57,7 @@
       "model": "role",
       "via": "users",
       "plugin": "users-permissions",
-      "configurable": false
+      "configurable": true
     },
     "firstName": {
       "type": "string"
