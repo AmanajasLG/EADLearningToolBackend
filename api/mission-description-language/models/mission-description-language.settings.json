@@ -20,6 +20,10 @@
     "mission": {
       "via": "missionDescriptionLanguages",
       "model": "mission"
+    },
+    "game_1_mission": {
+      "via": "missionDescriptionLanguages",
+      "model": "game1missions"
     }
   }
 }

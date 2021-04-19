@@ -18,8 +18,8 @@
       "type": "string"
     },
     "characters": {
-      "via": "game_1_missions",
       "collection": "character",
+      "via": "game_1_missions",
       "dominant": true
     },
     "questions": {
@@ -28,13 +28,21 @@
       "dominant": true
     },
     "locations": {
-      "via": "game_1_missions",
       "collection": "location",
+      "via": "game_1_missions",
       "dominant": true
     },
     "game_1_mission_characters": {
-      "via": "game_1_mission",
-      "collection": "game1mission-character"
+      "collection": "game1mission-character",
+      "via": "game_1_mission"
+    },
+    "missionNameLanguages": {
+      "collection": "mission-name-language",
+      "via": "game_1_mission"
+    },
+    "missionDescriptionLanguages": {
+      "collection": "mission-description-language",
+      "via": "game_1_mission"
     }
   }
 }

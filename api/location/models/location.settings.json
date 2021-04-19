@@ -24,8 +24,8 @@
       "via": "locations"
     },
     "game_1_missions": {
-      "collection": "game1missions",
-      "via": "locations"
+      "via": "locations",
+      "collection": "game1missions"
     },
     "type": {
       "type": "enumeration",

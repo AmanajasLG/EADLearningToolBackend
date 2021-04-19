@@ -9,22 +9,26 @@ const { isDraft } = require('strapi-utils').contentTypes;
 module.exports = {
   find(params, populate) {
     let p = [
-      {path: 'locations', populate: 'backgroundAssets'},
-      {path: 'characters', populate: ['characterAssets', 'game_1_mission_characters']},
+      { path: 'locations', populate: 'backgroundAssets' },
+      { path: 'characters', populate: ['characterAssets', 'game_1_mission_characters'] },
       'questions',
       'backgroundAudios',
-      'game_1_mission_characters'
+      'game_1_mission_characters',
+      'missionNameLanguages',
+      'missionDescriptionLanguages'
     ]
     return strapi.query('game1missions').find(params, p);
   },
 
   findOne(params, populate) {
     let p = [
-      {path: 'locations', populate: 'backgroundAssets'},
-      {path: 'characters', populate: ['characterAssets', 'game_1_mission_characters']},
+      { path: 'locations', populate: 'backgroundAssets' },
+      { path: 'characters', populate: ['characterAssets', 'game_1_mission_characters'] },
       'questions',
       'backgroundAudios',
-      'game_1_mission_characters'
+      'game_1_mission_characters',
+      'missionNameLanguages',
+      'missionDescriptionLanguages'
     ]
     return strapi.query('game1missions').findOne(params, p);
   },
@@ -43,18 +47,18 @@ module.exports = {
     );
 
     //create a missionData for each new character added (characters are IDs)
-    validData.characters.map( async character => {
-      let characterMissionData = existingEntry.game_1_mission_characters.find( missionData => missionData.character === character )
+    validData.characters.map(async character => {
+      let characterMissionData = existingEntry.game_1_mission_characters.find(missionData => missionData.character === character)
 
-      if(!characterMissionData){
-        const characterDataEntry = await strapi.query('game1mission-character').create({character: character, game_1_mission: existingEntry.id});
+      if (!characterMissionData) {
+        const characterDataEntry = await strapi.query('game1mission-character').create({ character: character, game_1_mission: existingEntry.id });
       }
     })
 
     //delete an existing missionData for each character removed
-    existingEntry.game_1_mission_characters.map( async characterMissionData => {
-      if(!validData.characters.includes(characterMissionData.character)) {
-        await strapi.query('game1mission-character').delete({id: characterMissionData.id})
+    existingEntry.game_1_mission_characters.map(async characterMissionData => {
+      if (!validData.characters.includes(characterMissionData.character)) {
+        await strapi.query('game1mission-character').delete({ id: characterMissionData.id })
       }
     })
 

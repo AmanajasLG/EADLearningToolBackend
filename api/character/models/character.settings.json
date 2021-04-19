@@ -34,8 +34,8 @@
       "via": "characters"
     },
     "game_1_missions": {
-      "collection": "game1missions",
-      "via": "characters"
+      "via": "characters",
+      "collection": "game1missions"
     },
     "missionCharacters": {
       "via": "character",

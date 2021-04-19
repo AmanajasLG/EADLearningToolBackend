@@ -22,8 +22,8 @@
       "via": "game_1_mission_characters"
     },
     "game_1_mission": {
-      "model": "game1missions",
-      "via": "game_1_mission_characters"
+      "via": "game_1_mission_characters",
+      "model": "game1missions"
     }
   }
 }
