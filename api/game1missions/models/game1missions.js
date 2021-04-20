@@ -17,12 +17,14 @@ module.exports = {
 
         if (!characterMissionData) {
           const characterDataEntry = await strapi.query('game1mission-character').create({ character: character, game_1_mission: params._id });
-          //data.game_1_mission_characters = [...data.game_1_mission_characters, characterDataEntry.id]
+          data.game_1_mission_characters.push(characterDataEntry.id)
           console.log('characterDataEntry:', characterDataEntry)
         }
       })
 
       //delete an existing missionData for each character removed
+      console.log('delete missionData for each character removed')
+      console.log('g1mc:', data.game_1_mission_characters)
       data.game_1_mission_characters.map(async characterMissionData => {
         if (!data.characters.includes(characterMissionData.character)) {
           await strapi.query('game1mission-character').delete({ id: characterMissionData.id })
