@@ -11,12 +11,13 @@ module.exports = {
       console.log('before update')
       console.log('params:', params)
       console.log('data:', data)
+
       data.characters.map(async character => {
         let characterMissionData = data.game_1_mission_characters.find(missionData => missionData.character === character)
 
         if (!characterMissionData) {
-          const characterDataEntry = await strapi.query('game1mission-character').create({ character: character, game_1_mission: data.id });
-          data.game_1_mission_characters = [...data.game_1_mission_characters, characterDataEntry.id]
+          const characterDataEntry = await strapi.query('game1mission-character').create({ character: character, game_1_mission: params._id });
+          //data.game_1_mission_characters = [...data.game_1_mission_characters, characterDataEntry.id]
           console.log('characterDataEntry:', characterDataEntry)
         }
       })
