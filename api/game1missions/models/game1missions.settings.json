@@ -33,8 +33,8 @@
       "dominant": true
     },
     "game_1_mission_characters": {
-      "collection": "game1mission-character",
-      "via": "game_1_mission"
+      "via": "game_1_mission",
+      "collection": "game1mission-character"
     },
     "missionNameLanguages": {
       "collection": "mission-name-language",
