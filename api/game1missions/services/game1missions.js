@@ -11,7 +11,7 @@ module.exports = {
     let p = [
       { path: 'locations', populate: 'backgroundAssets' }, ,
       'questions',
-      'backgroundAudios',
+      'background_audios',
       { path: 'game_1_mission_characters', populate: [{ path: 'character', populate: ['characterAssets'] }, 'answers'] },
       'missionNameLanguages',
       'missionDescriptionLanguages'
@@ -23,7 +23,7 @@ module.exports = {
     let p = [
       { path: 'locations', populate: 'backgroundAssets' },
       'questions',
-      'backgroundAudios',
+      'background_audios',
       { path: 'game_1_mission_characters', populate: [{ path: 'character', populate: ['characterAssets'] }, 'answers'] },
       'missionNameLanguages',
       'missionDescriptionLanguages'

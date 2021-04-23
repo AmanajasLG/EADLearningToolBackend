@@ -11,7 +11,7 @@ module.exports = {
     let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'missionCharacters', populate: {
       path: 'character',
       populate: 'characterAssets'
-    }}, 'questions', 'backgroundAudios', 'missionNameLanguages','missionDescriptionLanguages']
+    }}, 'questions', 'background_audios', 'missionNameLanguages','missionDescriptionLanguages']
     return strapi.query('mission').find(params, p);
   },
 
@@ -19,14 +19,14 @@ module.exports = {
     let p = [{path: 'locations', populate: 'backgroundAssets'}, {path: 'missionCharacters', populate: {
       path: 'character',
       populate: 'characterAssets'
-    }}, 'questions', 'backgroundAudios', 'missionNameLanguages','missionDescriptionLanguages']
+    }}, 'questions', 'background_audios', 'missionNameLanguages','missionDescriptionLanguages']
     return strapi.query('mission').findOne(params, p);
   },
 
   async update(params, data) {
       //how entry was
       const existingEntry = await strapi.query('mission').findOne(params);
-            
+
       //validation and cleaning, don't know exaclty
       const draft = isDraft(existingEntry, strapi.models.mission);
 
@@ -42,7 +42,7 @@ module.exports = {
       //create a missionData for each new character added (characters are IDs)
       createData.map( async (missionCharacter, index) => {
         let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character.toString() === missionCharacter.character.id )
-    
+
         if(!characterMissionData){
           const characterDataEntry = await strapi.query('mission-character').create({
             ...missionCharacter,
@@ -58,7 +58,7 @@ module.exports = {
           await strapi.query('mission-character').delete({id: characterMissionData.id})
         }
       })
-      
+
       const entry = await strapi.query('mission').update(params, validData);
 
       return entry;
@@ -67,7 +67,7 @@ module.exports = {
   async create(data) {
     //how entry was
     const existingEntry = await strapi.query('mission').findOne(params);
-            
+
     //validation and cleaning, don't know exaclty
     const draft = isDraft(existingEntry, strapi.models.mission);
 
@@ -83,7 +83,7 @@ module.exports = {
     //create a missionData for each character added
     createData.map( async (missionCharacter, index) => {
       let characterMissionData = existingEntry.missionCharacters.find( missionData => missionData.character.toString() === missionCharacter.character.id )
-  
+
       if(!characterMissionData){
         const characterDataEntry = await strapi.query('mission-character').create({
           ...missionCharacter,
@@ -92,7 +92,7 @@ module.exports = {
         });
       }
     })
-    
+
     const entry = await strapi.query('mission').update(params, validData);
 
     return entry;
