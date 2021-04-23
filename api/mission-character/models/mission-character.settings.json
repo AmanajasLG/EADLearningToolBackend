@@ -12,8 +12,8 @@
   },
   "attributes": {
     "mission": {
-      "model": "mission",
-      "via": "missionCharacters"
+      "via": "missionCharacters",
+      "model": "mission"
     },
     "character": {
       "model": "character",
