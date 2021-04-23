@@ -27,6 +27,10 @@
     "missions": {
       "via": "backgroundAudios",
       "collection": "mission"
+    },
+    "game_1_missions": {
+      "via": "background_audios",
+      "collection": "game1missions"
     }
   }
 }
