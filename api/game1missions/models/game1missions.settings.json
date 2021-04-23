@@ -44,7 +44,7 @@
       "collection": "mission-description-language",
       "via": "game_1_mission"
     },
-    "background_audios": {
+    "backgroundAudios": {
       "collection": "background-audio",
       "via": "game_1_missions",
       "dominant": true

@@ -29,7 +29,7 @@
       "collection": "mission"
     },
     "game_1_missions": {
-      "via": "background_audios",
+      "via": "backgroundAudios",
       "collection": "game1missions"
     }
   }
